@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "mealdb-client", url = "https://www.themealdb.com/api/json/v1/1")
 public interface MealDbClient {
 
-    // Búsqueda de comidas por nombre
     @GetMapping("/search.php")
     MealResponse searchMealByName(@RequestParam("s") String mealName);
 }
